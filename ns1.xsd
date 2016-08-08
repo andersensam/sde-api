@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <schema targetNamespace="http://tempuri.org/ns1.xsd"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns1="http://tempuri.org/ns1.xsd"
+    xmlns:ns="urn:types"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified">
+    <import namespace="urn:types"/>
+    <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    <complexType name="SDEKey"><!-- ns1:SDEKey -->
+          <sequence>
+            <element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns1:SDEKey::name -->
+          </sequence>
+    </complexType>
+  </schema>
+

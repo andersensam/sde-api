@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <schema targetNamespace="urn:SDE"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="urn:SDE"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified">
+    <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    <complexType name="SDEKey"><!-- ns:SDEKey -->
+          <sequence>
+            <element name="sessionKey" type="xsd:string" minOccurs="0" maxOccurs="1" default="0"/><!-- ns:SDEKey::sessionKey -->
+          </sequence>
+    </complexType>
+    <!-- operation request element -->
+    <element name="getLoginInfo">
+      <complexType>
+          <sequence>
+            <element name="session" type="ns:SDEKey" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__getLoginInfo::session -->
+            <element name="desiredOnyen" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__getLoginInfo::desiredOnyen -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="getLoginInfoResponse">
+      <complexType>
+          <sequence>
+            <element name="response" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__getLoginInfo::response -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation request element -->
+    <element name="getRegisteredClasses">
+      <complexType>
+          <sequence>
+            <element name="session" type="ns:SDEKey" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__getRegisteredClasses::session -->
+            <element name="desiredOnyen" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__getRegisteredClasses::desiredOnyen -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="getRegisteredClassesResponse">
+      <complexType>
+          <sequence>
+            <element name="response" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/><!-- ns__getRegisteredClasses::response -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation request element -->
+    <element name="addOnyen">
+      <complexType>
+          <sequence>
+            <element name="session" type="ns:SDEKey" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__addOnyen::session -->
+            <element name="desiredOnyen" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__addOnyen::desiredOnyen -->
+            <element name="desiredPassword" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__addOnyen::desiredPassword -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="addOnyenResponse">
+      <complexType>
+          <sequence>
+            <element name="response" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__addOnyen::response -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation request element -->
+    <element name="registerClass">
+      <complexType>
+          <sequence>
+            <element name="session" type="ns:SDEKey" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__registerClass::session -->
+            <element name="desiredOnyen" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__registerClass::desiredOnyen -->
+            <element name="desiredClass" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- ns__registerClass::desiredClass -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="registerClassResponse">
+      <complexType>
+          <sequence>
+            <element name="response" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__registerClass::response -->
+          </sequence>
+      </complexType>
+    </element>
+  </schema>
+
